@@ -1,0 +1,280 @@
+:root {
+font-size: 16px;
+--color1: #ffb703;
+--color2: #219ebc;
+--color3: #fb8500;
+--color4: #023047;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+}
+
+body {
+width: 100vw;
+height: auto;
+min-height: 100vh;
+}
+
+header {
+width: 100%;
+height: 60px;
+background-color: var(--color4);
+position: fixed;
+top: 0;
+z-index: 1000;
+}
+
+#navbar {
+width: 100%;
+height: 60px;
+margin-left: auto;
+position: fixed;
+top: 0;
+}
+
+#navbar-list {
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.navbar-list-item {
+height: 100%;
+width: 25%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.navbar-list-item-link {
+font-family: Sans-Serif;
+font-size: 1.25rem;
+color: var(--color1)
+}
+
+.navbar-list-item-link:hover {
+cursor: pointer;
+color: var(--color3);
+}
+
+.resume:hover {
+color: white;
+}
+
+main {
+width: 100%;
+}
+
+#welcome-section {
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: row;
+text-align: center;
+align-items: center;
+background-color: var(--color2);
+z-index: -2;
+}
+
+#welcome-section>h1 {
+margin: 0 5%;
+color: var(--color4);
+font-family: Sans-serif;
+font-size: 2.5rem;
+}
+
+.name {
+position: relative;
+z-index: 1;
+display: inline-block;
+}
+
+.name::after {
+content: "";
+width: 100%;
+height: 5px;
+position: absolute;
+background: var(--color3);
+bottom: 0;
+left: 0;
+z-index: -1;
+border-radius: 30%;
+transform: rotate(-3deg);
+}
+
+.profile-image {
+border-radius: 50%;
+border: 6px solid var(--color4);
+margin: 20px;
+}
+
+#projects {
+width: 100%;
+min-height: 100vh;
+height: auto;
+background-color: var(--color4);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+border-top: 6px solid var(--color3);
+border-bottom: 6px solid var(--color3);
+}
+
+#skills-section {
+width: 100%;
+min-height: 250px;
+height: auto;
+background-color: var(--color2);
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+border-bottom: 6px solid var(--color3);
+}
+
+.skill-tile {
+background-color: var(--color4);
+color: var(--color3);
+font-family: sans-serif;
+width: auto;
+height: auto;
+border-radius: 10px;
+margin: 15px
+}
+
+.skill-tile > h1 {
+margin: 10px;
+padding: 10px;
+}
+
+.project-tile {
+width: 350px;
+height: 400px;
+background-color: var(--color1);
+margin: 30px;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+}
+
+.project-image {
+height: 100%;
+width: 100%;
+object-fit: contain;
+overflow: hidden;
+border-radius: 20px 20px 0 0;
+}
+
+.project-title {
+width: 100%;
+height: 70px;
+background-color: var(--color3);
+margin-top: auto;
+border-radius: 0 0 20px 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-top: 2px solid var(--color4);
+}
+
+.project-link {
+font-family: sans-serif;
+color: var(--color4);
+font-weight: normal;
+}
+
+.project-link:hover {
+cursor: pointer;
+font-weight: bold;
+}
+
+#contact-section {
+width: 100%;
+height: auto;
+min-height: 50vh;
+display: flex;
+flex-direction: column;
+background-color: var(--color4);
+justify-content: center;
+align-items: center;
+border-bottom: 6px solid var(--color3);
+}
+
+#contact-heading {
+font-family: sans-serif;
+color: var(--color3);
+font-size: 3rem;
+}
+
+.contact-div {
+font-family: sans-serif;
+font-size: 1.5rem;
+color: var(--color2);
+margin: 4px 0;
+}
+
+#profile-link {
+color: var(--color2);
+}
+
+#profile-linkedin-link {
+color: var(--color2);
+}
+
+footer {
+width: 100%;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--color1);
+}
+
+footer p {
+color: var(--color4);
+font-family: sans-serif;
+font-size: 1.2rem;
+}
+
+@media screen and (max-width: 680px) {
+:root {
+font-size: 12px;
+}
+
+header {
+width: 100%;
+height: 60px;
+}
+
+#welcome-section {
+height: 900px;
+flex-direction: column;
+}
+
+#navbar {
+width: 100%;
+height: 60px;
+margin: 0;
+}
+
+#navbar-list {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.profile-image {
+width: 200px;
+margin-top: 80px;
+}
+}
